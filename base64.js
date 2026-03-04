@@ -1,0 +1,1 @@
+const TEMPLATE_BASE64 = "  + [Convert]::ToBase64String([IO.File]::ReadAllBytes( template.pdf)) + \;
