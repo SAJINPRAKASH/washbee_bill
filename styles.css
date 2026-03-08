@@ -382,19 +382,28 @@ input[type="file"]::file-selector-button:hover {
     border: 1px solid rgba(255, 71, 87, 0.2);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .glass-panel {
-        padding: 2rem;
+        padding: 1.5rem;
     }
 
     .grid-2 {
         grid-template-columns: 1fr;
     }
 
-    .service-header,
+    .service-header {
+        display: none;
+    }
+
     .service-row {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .col-rate {
+        text-align: left;
     }
 }
 
@@ -403,7 +412,9 @@ input[type="file"]::file-selector-button:hover {
 /* ------------------------------------- */
 .invoice-box {
     width: 397px;
-    min-height: 561px;
+    height: 561px;
+    max-height: 561px;
+    overflow: hidden;
     background: #ffffff;
     color: #1a1a2e;
     font-family: 'Outfit', 'Inter', sans-serif;
@@ -518,7 +529,7 @@ input[type="file"]::file-selector-button:hover {
 
 /* Table */
 .in-table {
-    margin-bottom: 150px;
+    margin-bottom: 20px;
     position: relative;
     z-index: 1;
 }
