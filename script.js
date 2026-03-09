@@ -175,8 +175,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 margin: 0,
                 filename: `wb ${clientNameVal} bill.pdf`,
                 image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 3, useCORS: true, logging: true },
-                jsPDF: { unit: 'mm', format: 'a5', orientation: 'portrait' }
+                html2canvas: { 
+                    scale: 3, 
+                    useCORS: true, 
+                    logging: true,
+                    scrollY: 0,
+                    scrollX: 0
+                },
+                jsPDF: { unit: 'px', format: [559, 793], orientation: 'portrait' }
             };
 
             await html2pdf().set(opt).from(element).save();
